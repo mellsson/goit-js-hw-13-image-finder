@@ -28,11 +28,64 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
-  max-width: calc(100% - 300px);
+  max-width: calc(100% - 100px);
   margin-left: auto;
   margin-right: auto;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 24px;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 8px;
+  }
+
+  &__image {
+    height: 300px;
+    object-fit: cover;
+    max-width: 100%;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: center;
+  }
+  &__stats-item {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  &__button {
+    text-align: center;
+  }
+
 }
+
+.search-form {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+}
+.visibility {
+  display: none;
+}
+
+//.card {
+//  position: relative;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  height: 100%;
+//  padding-bottom: 8px;
+//}
+
+

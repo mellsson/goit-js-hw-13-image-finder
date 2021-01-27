@@ -6,11 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Starter Kit</title>
 
+
   </head>
 
   <body>
-  <form class="search-form" id="search-form">
 
+  <form class="search-form" id="search-form" onsubmit='return false'>
+    <input
+      type="text"
+      name="query"
+      autocomplete="off"
+      placeholder="Search images..."
+    />
   </form>
+
+    <ul class="gallery" >
+      <!-- Список <li> с карточками изображений -->
+    </ul>
+  <div class="loader loader-default"></div>
+  <div class='gallery__button'>
+    <button type='button' class='js-gallery__button visibility'>Load more</button>
+  </div>
   </body>
 </html>
