@@ -18,3 +18,21 @@ body {
    */
   background-image: url('./images/bg-pattern.png');
 }
+
+ul {
+  list-style: none;
+}
+
+
+.gallery {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: calc(100% - 300px);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 24px;
+}
