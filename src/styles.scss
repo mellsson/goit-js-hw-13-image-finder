@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  height: 100%;
+  overflow: auto;
 }
 
 *,
@@ -17,7 +19,9 @@ body {
    * CSS image reference example.
    */
   background-image: url('./images/bg-pattern.png');
+  height: 100%;
 }
+
 
 ul {
   list-style: none;

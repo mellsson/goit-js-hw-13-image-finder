@@ -10,24 +10,30 @@ function fetchImages() {
   refs.button.classList.add('visibility');
   refs.loader.classList.add('is-active');
   imagesApi.fetchImages().then(images => {
+
+    if(images.length === 0) {
+     return;
+    }
+
     markUp(images);
 
       // lazyLoad();
 
     refs.gallery.addEventListener('click',openImages);
     refs.button.classList.remove('visibility');
-
-      window.scrollTo({
-        top: document.documentElement.offsetHeight,
-        behavior: 'smooth',
-      });
+    console.log(imagesApi.page )
+     if(imagesApi.page > 2) {
+       window.scrollBy(
+         {
+           top:window.innerHeight,
+           behavior: 'smooth',})
+     }
 
   }
   ).finally(()=> {
     refs.loader.classList.remove('is-active');
   }).catch(error =>console.log(error))
 }
-
 
 
 export default fetchImages;
