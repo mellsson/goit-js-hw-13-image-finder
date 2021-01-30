@@ -21,7 +21,6 @@ function fetchImages() {
 
     refs.gallery.addEventListener('click',openImages);
     refs.button.classList.remove('visibility');
-    console.log(imagesApi.page )
      if(imagesApi.page > 2) {
        window.scrollBy(
          {
